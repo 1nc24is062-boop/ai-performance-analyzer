@@ -1,0 +1,13 @@
+import pandas as pd
+
+def analyze_ads(file_path):
+    df = pd.read_csv(file_path)
+    # Simple performance metric: CTR (Click Through Rate)
+    df['CTR'] = df['Clicks'] / df['Impressions']
+    top_ads = df.sort_values(by='CTR', ascending=False).head(5)
+    return top_ads
+
+if __name__ == "__main__":
+    results = analyze_ads("data/sample_ads.csv")
+    print("Top Performing Ads:")
+    print(results[['AdName', 'CTR']])
