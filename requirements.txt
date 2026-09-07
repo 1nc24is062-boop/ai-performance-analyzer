@@ -1,0 +1,9 @@
+ai-performance-analyzer/
+│── README.md
+│── requirements.txt
+│── data/
+│    └── sample_ads.csv
+│── src/
+│    └── analyzer.py
+│── notebooks/
+│    └── analysis.ipynb
